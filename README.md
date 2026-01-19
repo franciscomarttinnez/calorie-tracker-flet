@@ -37,7 +37,7 @@ Features
 
 ### 1️⃣ Clone the repository
 
-git clone https://github.com/TU_USUARIO/calorie-tracker-flet.git
+git clone https://github.com/yourusername/calorie-tracker-flet.git
 cd calorie-tracker-flet
 
 2️⃣ Create virtual environment (recommended)
