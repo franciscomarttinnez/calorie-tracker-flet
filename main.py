@@ -6,7 +6,7 @@ foods = FOODS
 PROFILE_FILE = "user_profile.json"
 
 
-# ---------- CALORIE CALCULATION ----------
+
 def calculate_daily_calories(profile):
     weight = profile["weight"]
     height = profile["height"]
@@ -31,7 +31,7 @@ def main(page: ft.Page):
     page.scroll = ft.ScrollMode.AUTO
     profile = None
 
-    # ---------- PROFILE STORAGE ----------
+
     def safe_float(value):
         try:
             return float(value)
@@ -70,13 +70,13 @@ def main(page: ft.Page):
         page.update()
 
 
-    # ---------- DAILY STATE ----------
+
     total_calories = 0.0
     total_protein = 0.0
     total_fat = 0.0
     total_carbs = 0.0
 
-    # ---------- HOME CONTROLS ----------
+
     calories_text = ft.Text("0", size=64, weight=ft.FontWeight.BOLD)
     progress_bar = ft.ProgressBar(width=300, value=0)
 
@@ -92,7 +92,6 @@ def main(page: ft.Page):
 )
 
 
-    # ---------- HOME ----------
     def update_home():
         calories_text.value = str(int(total_calories))
         progress_bar.value = min(total_calories / profile["daily_calories"], 1)
@@ -293,7 +292,7 @@ ft.TextButton(
             )
         )
 
-    # ---------- SETTINGS ----------
+
     def show_settings():
         page.controls.clear()
 
@@ -392,8 +391,6 @@ ft.TextButton(
             )
 
             open_dialog(dialog)
-
-
 
 
 
